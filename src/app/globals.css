@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,15 +22,15 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
 }
 
 a {
@@ -35,8 +38,40 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+.tab {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #BDBDBD;
+  padding: 10px 16px;
+}
+
+input[type="checkbox"] {
+  background-color: white;
+  border: 1px solid #8699B8;
+  border-radius: 0.25rem;
+  accent-color: #304EA1;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #304EA1;
+  border-color: #304EA1;
+}
+
+
+.active-tab {
+  border-bottom: 3px solid #304EA1;
+  color: #304EA1;
+  background-color: #D6DCEC;
+
+}
+
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
