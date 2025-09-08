@@ -25,6 +25,22 @@ const ProductListWrapper = () => {
     { label: "Latest", value: "DESC" },
     { label: "Oldest", value: "ASC" }
   ];
+  const filteredProducts = products
+    .filter((product) => {
+      if (!search) return true;
+      const searchTerm = search.toLowerCase();
+      return (
+        product.title.toLowerCase().includes(searchTerm) ||
+        product.unspc.toLowerCase().includes(searchTerm) ||
+        product.category.toLowerCase().includes(searchTerm)
+      );
+    })
+    .sort((a, b) => {
+      if (selectValue === "ASC") {
+        return a.id - b.id;
+      }
+      return b.id - a.id;
+    });
   return (
     <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
       <div className="md:col-span-1 p-4 flex flex-col">
@@ -56,7 +72,7 @@ const ProductListWrapper = () => {
           </div>
         </div>
         {activeTab === 0 ? (
-          <ProductList products={products} filters={filters} />
+          <ProductList products={filteredProducts} filters={filters} />
         ) : (
           <div className="mt-6 text-gray-700">
             <p>Suppliers</p>

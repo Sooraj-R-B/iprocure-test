@@ -3,7 +3,7 @@ const products = [
     id: 1,
     image: "/images/respirator.png",
     title: "3M 6200 Respirator Half Face Mask",
-    unspc: "RYFYTG3565",
+    unspc: "RTFYTG3565",
     category: "Safety Helmet"
   },
   {
@@ -11,7 +11,7 @@ const products = [
     image: "/images/helmet-yellow.png",
     title: "Free Sample XL Size Coated Gloves",
     unspc: "RYFYTG3565",
-    category: "Safety Helmet"
+    category: "Gloves"
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const products = [
     image: "/images/review-img.png",
     title: "Free Sample XL Size Coated Gloves",
     unspc: "RYFYTG3565",
-    category: "Safety Helmet"
+    category: "Gloves"
   },
   {
     id: 8,
